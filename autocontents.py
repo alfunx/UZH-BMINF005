@@ -29,7 +29,7 @@ def pullstatistics(stamp):
 			print("Approximately {} results.".format(struct["approximateResultCount"]))
 			print("Applications:")
 
-			stf = open("autostats.csv", "a")
+			stf = open("autostats-{}.csv".format(stamp), "a")
 			stw = csv.writer(stf)
 			stw.writerow([stamp, struct["approximateResultCount"]])
 			stf.close()
